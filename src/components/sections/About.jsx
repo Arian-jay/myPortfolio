@@ -12,7 +12,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-24 border-t border-line"
+      className="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-24 pt-10 border-t border-line"
     >
       <div className="flex items-center gap-4 mb-10">
         <span className="font-mono text-xs text-rust tnum">02</span>

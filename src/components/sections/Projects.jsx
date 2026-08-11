@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-24 pt-2 border-t border-line"
+      className="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-24 pt-0 border-t border-line"
     >
       <div className="flex items-center gap-4 mb-10">
         <span className="font-mono text-xs text-rust tnum">05</span>
