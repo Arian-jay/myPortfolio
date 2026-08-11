@@ -17,7 +17,7 @@ export default function Home() {
         <p className="mt-8 max-w-xl text-faint text-base sm:text-lg leading-relaxed">
           {PROFILE.summary}
         </p>
-        <div className="mt-10 flex items-center gap-4">
+        <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full">
           <a
             href="#projects"
             onClick={(e) => {
@@ -26,7 +26,7 @@ export default function Home() {
                 .getElementById("projects")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-6 py-3 bg-rust text-ink font-mono text-xs uppercase tracking-[0.15em] hover:bg-paper transition-colors"
+            className="w-full sm:w-auto px-6 py-3 bg-rust text-ink font-mono text-xs uppercase tracking-[0.15em] hover:bg-paper transition-colors text-center"
           >
             View Projects
           </a>
@@ -38,21 +38,21 @@ export default function Home() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors"
+            className="w-full sm:w-auto px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors text-center"
           >
             Get in Touch
           </a>
           <a
             href="/Resume.pdf"
             download="Resume.pdf"
-            className="px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors"
+            className="w-full sm:w-auto px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors text-center"
           >
             Download Resume
           </a>
           <a
             href="/cv.pdf"
             download="cv.pdf"
-            className="px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors"
+            className="w-full sm:w-auto px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors text-center"
           >
             Download CV
           </a>
