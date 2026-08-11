@@ -36,11 +36,11 @@ export const PROFILE = {
   name: "Arian Jay E. Prisco",
   initials: "AJEP",
   role: "Web Developer",
-  location: "Based in the Philippines",
+  location: "Philippines",
   tagline: "I build things for the web — carefully, and from scratch.",
   summary:
     "I'm a developer who enjoys taking an idea from a blank file to something people actually use. I care about clean structure, honest interfaces, and code that's still readable a year from now.",
-  resumeHref: "#contact",
+  resumeHref: "#home",
 };
 
 export const SKILLS = [

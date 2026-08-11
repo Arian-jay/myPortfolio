@@ -4,8 +4,8 @@ import { PROFILE } from "../../data/portfolioData.js";
 const FACTS = [
   { label: "Role", value: PROFILE.role },
   { label: "Location", value: PROFILE.location.replace("Based in ", "") },
-  { label: "Focus", value: "Web applications" },
-  { label: "Availability", value: "Open to opportunities" },
+  { label: "Focus", value: "Web Applications" },
+  { label: "Availability", value: "Open to Opportunities" },
 ];
 
 export default function About() {
