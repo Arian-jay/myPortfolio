@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #262624 #0a0a0a;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+*::-webkit-scrollbar-thumb {
+  background: #262624;
+  border-radius: 4px;
+}
+
+/* visible keyboard focus, kept consistent across all interactive elements */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #c9803d;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* faint graph-paper texture used behind the hero, evokes a technical notebook */
+.grid-paper {
+  background-image: linear-gradient(#1a1a18 1px, transparent 1px),
+    linear-gradient(90deg, #1a1a18 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* section numbering marks — tabular so digits align */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
