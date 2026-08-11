@@ -43,7 +43,7 @@ export default function Home() {
             Get in Touch
           </a>
           <a
-            href="/resume.pdf"
+            href="/Resume.pdf"
             download="Resume.pdf"
             className="px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors"
           >
