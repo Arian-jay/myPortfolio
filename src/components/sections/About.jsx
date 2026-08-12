@@ -27,7 +27,7 @@ export default function About() {
           <h2 className="font-display font-light text-3xl sm:text-4xl md:text-5xl leading-tight text-paper max-w-2xl">
             I like solving problems that live between design and code.
           </h2>
-          <p className="mt-6 text-faint text-base sm:text-lg leading-relaxed max-w-xl">
+          <p className="mt-6 text-faint text-base text-justify sm:text-lg leading-relaxed max-w-xl">
             {PROFILE.summary} Outside of writing code, I spend time studying
             layout and typography, reading through other people's projects,
             and refining the small details most people scroll past.

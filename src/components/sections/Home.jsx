@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className="font-display font-light text-[13vw] leading-[0.95] sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl text-paper whitespace-pre-line">
           {PROFILE.tagline}
         </h1>
-        <p className="mt-8 max-w-xl text-faint text-base sm:text-lg leading-relaxed">
+        <p className="mt-8 max-w-xl text-faint text-base text-justify sm:text-lg leading-relaxed">
           {PROFILE.summary}
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full">

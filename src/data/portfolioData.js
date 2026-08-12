@@ -1,5 +1,9 @@
 // Edit this file to personalize the portfolio — nothing else needs to change.
 import PROFILE_PIC from "./images/PROFILEPIC-CIRCLE.png";
+import charmafaWeb from "./images/projects/charmafaWeb.png";
+import charmafaMobile from "./images/projects/charmafaMobile.png";
+import portfolioImg from "./images/projects/portfolio.png";
+import ojtTrackerImg from "./images/projects/ojtTracker.png";
 
 export const NAV_ITEMS = [
   { id: "home", label: "Home" },
@@ -75,24 +79,35 @@ export const EXPERTISE = [
 
 export const PROJECTS = [
   {
-    title: "Project One",
-    year: "2025",
-    desc: "A short, honest description of what this project does and the problem it solves.",
-    stack: ["React", "Tailwind", "Node.js"],
+    title: "CHARMAFA Web App",
+    year: "2025-2026",
+    desc: "A web-based water billing and collection system for managing members, meter readings, billing records, payments, and administrative operations.",
+    stack: ["Laravel", "Nuxt", "SQLite", "Tailwind CSS"],
     href: "#",
+    image: charmafaWeb,
   },
   {
-    title: "Project Two",
-    year: "2024",
-    desc: "A short, honest description of what this project does and the problem it solves.",
-    stack: ["JavaScript", "Express", "MongoDB"],
+    title: "CHARMAFA Mobile App",
+    year: "2025-2026",
+    desc: "An offline-first mobile app for field collectors to record meter readings, manage billing data, process payments, and print receipts through Bluetooth.",
+    stack: ["Flutter", "Dart", "SQLite"],
     href: "#",
+    image: charmafaMobile,
   },
   {
-    title: "Project Three",
-    year: "2024",
-    desc: "A short, honest description of what this project does and the problem it solves.",
-    stack: ["React", "REST API"],
+    title: "Portfolio",
+    year: "2026",
+    desc: "A personal portfolio showcasing my projects, technical skills, experience, and background as an IT graduate and developer.",
+    stack: ["React", "Tailwind CSS", "Emailjs"],
     href: "#",
+    image: portfolioImg,
+  },
+  {
+    title: "OJT Time Tracker",
+    year: "2026",
+    desc: "A web-based time tracking system for recording OJT hours, monitoring attendance, and tracking progress toward required internship hours.",
+    stack: ["Next.js", "Tailwind CSS", "Supabase"],
+    href: "#",
+    image: ojtTrackerImg,
   },
 ];
