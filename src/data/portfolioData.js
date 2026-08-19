@@ -99,7 +99,7 @@ export const PROJECTS = [
     year: "2026",
     desc: "A personal portfolio showcasing my projects, technical skills, experience, and background as an IT graduate and developer.",
     stack: ["React", "Tailwind CSS", "Emailjs"],
-    href: "#",
+    href: "https://ajep-portfolio.vercel.app",
     image: portfolioImg,
   },
   {
@@ -107,7 +107,7 @@ export const PROJECTS = [
     year: "2026",
     desc: "A web-based time tracking system for recording OJT hours, monitoring attendance, and tracking progress toward required internship hours.",
     stack: ["Next.js", "Tailwind CSS", "Supabase"],
-    href: "#",
+    href: "https://ojtime.vercel.app",
     image: ojtTrackerImg,
   },
 ];
