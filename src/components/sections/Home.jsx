@@ -8,7 +8,8 @@ export default function Home() {
       className="grid-paper relative min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-24"
     >
       <div className="max-w-3xl">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-rust mb-6">Based in the {PROFILE.location}
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-rust mb-6">
+          Based in the {PROFILE.location}
         </p>
         <h1 className="font-display font-light text-[13vw] leading-[0.95] sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl text-paper whitespace-pre-line">
           {PROFILE.tagline}

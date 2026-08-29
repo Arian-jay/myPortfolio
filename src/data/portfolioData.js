@@ -9,8 +9,10 @@ export const NAV_ITEMS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About Me" },
   { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
   { id: "expertise", label: "Expertise" },
   { id: "projects", label: "Projects" },
+  { id: "certifications", label: "Certifications" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -58,6 +60,21 @@ export const SKILLS = [
   { name: "MySQL, Supabase, PostgreSQL", note: "Database management system"},
 ];
 
+export const EDUCATION = [
+  {
+    title: "Caraga State University",
+    subtitle: "Bachelor of Science in Information Technology",
+    year: "2022 - 2026",
+    detail: "Graduated with a degree in Information Technology, where I developed practical skills in software development, web and mobile application development, database management, and system design. I also gained hands-on experience through academic projects, research, and industry internship.",
+  },
+  {
+    title: "Libertad National High School",
+    subtitle: "STEM",
+    year: "2020 - 2022",
+    detail: "Graduated with honors from the STEM strand, where I developed my interest in technology while building strong skills in mathematics, science, research, and problem-solving.",
+  },
+];
+
 export const EXPERTISE = [
   {
     title: "Frontend Engineering",
@@ -75,6 +92,14 @@ export const EXPERTISE = [
     title: "Performance & Structure",
     desc: "Organizing components and state so a project stays easy to change six months later.",
   },
+];
+
+export const CERTIFICATIONS = [
+  "TOPCIT Level 2 Certification (IITP, Republic of Korea).",
+  "PAGSANYOG 2025 Pre-Incubation Workshop Certificate.",
+  "Oral Presenter, 9th International Artificial Intelligence and Data Processing Symposium (IDAP'25).",
+  "SCII-Com'26 Participant Certificate.",
+  "Best Poster Award, SCII-Com'26 – Awarded for outstanding research poster presentation.",
 ];
 
 export const PROJECTS = [
@@ -98,7 +123,7 @@ export const PROJECTS = [
     title: "Portfolio",
     year: "2026",
     desc: "A personal portfolio showcasing my projects, technical skills, experience, and background as an IT graduate and developer.",
-    stack: ["React", "Tailwind CSS", "Emailjs"],
+    stack: ["React", "Tailwind CSS", "Emailjs", "React Bits"],
     href: "https://ajep-portfolio.vercel.app",
     image: portfolioImg,
   },
@@ -106,7 +131,7 @@ export const PROJECTS = [
     title: "OJT Time Tracker",
     year: "2026",
     desc: "A web-based time tracking system for recording OJT hours, monitoring attendance, and tracking progress toward required internship hours.",
-    stack: ["Next.js", "Tailwind CSS", "Supabase"],
+    stack: ["Next.js", "Tailwind CSS", "Supabase", "Shadcn/UI"],
     href: "https://ojtime.vercel.app",
     image: ojtTrackerImg,
   },

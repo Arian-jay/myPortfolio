@@ -10,7 +10,7 @@ export default function Skills() {
       <div className="flex items-center gap-4 mb-10">
         <span className="font-mono text-xs text-rust tnum">03</span>
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-faint">
-          Skills
+          Tech Stack
         </span>
         <span className="flex-1 h-px bg-line" />
       </div>

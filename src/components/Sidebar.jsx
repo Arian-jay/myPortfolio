@@ -17,6 +17,8 @@ export default function Sidebar() {
   const [activeId, setActiveId] = useState(NAV_ITEMS[0].id);
   const [isOpen, setIsOpen] = useState(false);
   const railRef = useRef(null);
+  const navRef = useRef(null);
+  const navItemRefs = useRef({});
 
   // Scrollspy: track which section is currently in the "reading band" of the viewport.
   useEffect(() => {
@@ -48,6 +50,29 @@ export default function Sidebar() {
   }, [isOpen]);
 
   const activeIndex = NAV_ITEMS.findIndex((item) => item.id === activeId);
+
+  useEffect(() => {
+    const activeItem = navItemRefs.current[activeId];
+    if (!activeItem || !navRef.current) return;
+
+    const container = navRef.current;
+    const itemTop = activeItem.offsetTop;
+    const itemBottom = itemTop + activeItem.offsetHeight;
+    const containerTop = container.scrollTop;
+    const containerBottom = containerTop + container.clientHeight;
+
+    if (itemBottom > containerBottom - 10) {
+      container.scrollTo({
+        top: itemBottom - container.clientHeight + 12,
+        behavior: "smooth",
+      });
+    } else if (itemTop < containerTop + 10) {
+      container.scrollTo({
+        top: itemTop - 12,
+        behavior: "smooth",
+      });
+    }
+  }, [activeId]);
 
   return (
     <>
@@ -159,98 +184,103 @@ export default function Sidebar() {
       </div>
 
       {/* ---------- Desktop sidebar ---------- */}
-      <aside className="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-64 border-r border-line px-6 py-8 xl:w-72 xl:px-8 z-30">
-        <div className="flex min-h-0 flex-1 flex-col">
-          <div className="flex flex-1 items-center justify-center py-4">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="flex w-full flex-col items-center text-center"
-            >
-              <span className="mb-6 inline-flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border border-line/80 bg-paper shadow-[0_0_0_6px_rgba(201,128,61,0.12)] sm:h-44 sm:w-44 xl:h-48 xl:w-48">
-                <img
-                  src={PROFILE.profilePic}
-                  alt={PROFILE.name}
-                  className="h-full w-full object-cover object-center"
-                />
-              </span>
-              <span className="block font-display text-[22px] leading-tight tracking-tight text-paper">
-                {PROFILE.name}
-              </span>
-              <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.18em] text-faint">
-                {PROFILE.role}
-              </span>
-            </button>
-          </div>
- 
-          {/* Signature element: a vertical progress rail that tracks reading position,
-              not just decoration — the filled segment marks the section in view. */}
-          <nav className="relative shrink-0 py-5">
-          <div
-            ref={railRef}
-            className="absolute left-[7px] top-1 bottom-1 w-px bg-line"
-            aria-hidden="true"
-          >
-            <div
-              className="absolute left-0 w-px bg-rust transition-all duration-500 ease-out"
-              style={{
-                top: `${(activeIndex / NAV_ITEMS.length) * 100}%`,
-                height: `${100 / NAV_ITEMS.length}%`,
-              }}
-            />
-          </div>
+      <aside className="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-64 border-r border-line px-6 py-8 xl:w-72 xl:px-8 z-30 bg-ink">
+       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+         <div className="flex shrink-0 items-center justify-center py-4">
+           <button
+             onClick={() => scrollToSection("home")}
+             className="flex w-full flex-col items-center text-center"
+           >
+             <span className="mb-6 inline-flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border border-line/80 bg-paper shadow-[0_0_0_6px_rgba(201,128,61,0.12)] sm:h-44 sm:w-44 xl:h-48 xl:w-48">
+               <img
+                 src={PROFILE.profilePic}
+                 alt={PROFILE.name}
+                 className="h-full w-full object-cover object-center"
+               />
+             </span>
+             <span className="block font-display text-[22px] leading-tight tracking-tight text-paper">
+               {PROFILE.name}
+             </span>
+             <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.18em] text-faint">
+               {PROFILE.role}
+             </span>
+           </button>
+         </div>
 
-          <ul className="flex flex-col gap-1 pl-6">
-            {NAV_ITEMS.map((item, i) => {
-              const isActive = activeId === item.id;
-              return (
-                <li key={item.id}>
-                  <button
-                    onClick={() => scrollToSection(item.id)}
-                    className="group flex items-baseline gap-3 py-2.5 w-full text-left"
-                  >
-                    <span
-                      className={`font-mono text-[11px] tnum transition-colors ${
-                        isActive ? "text-rust" : "text-rustdim group-hover:text-rust"
-                      }`}
-                    >
-                      0{i + 1}
-                    </span>
-                    <span
-                      className={`font-body text-[15px] transition-colors ${
-                        isActive
-                          ? "text-paper"
-                          : "text-faint group-hover:text-paper"
-                      }`}
-                    >
-                      {item.label}
-                    </span>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+         <div className="relative mt-4 flex-1 overflow-hidden">
+           <div
+             ref={railRef}
+             className="pointer-events-none absolute left-[7px] top-0 bottom-0 w-px bg-line"
+             aria-hidden="true"
+           >
+             <div
+               className="absolute left-0 w-px bg-rust transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+               style={{
+                 top: `${(activeIndex / NAV_ITEMS.length) * 100}%`,
+                 height: `${100 / NAV_ITEMS.length}%`,
+               }}
+             />
+           </div>
 
-        <div className="mt-auto border-t border-line pt-2">
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 ">
-            {SOCIALS.map((social) => {
-              const Icon = SOCIAL_ICONS[social.icon];
-              return (
-                <a
-                  key={social.id}
-                  href={social.href}
-                  target={social.icon === "mail" ? undefined : "_blank"}
-                  rel="noreferrer"
-                  aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full text-faint transition-colors hover:bg-rust/10 hover:text-rust"
-                >
-                  <Icon className="h-[22px] w-[22px]" />
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+           <nav ref={navRef} className="h-full overflow-y-auto py-5 pr-2 scroll-smooth">
+             <ul className="flex flex-col gap-1 pl-6">
+               {NAV_ITEMS.map((item, i) => {
+                 const isActive = activeId === item.id;
+                 return (
+                   <li
+                     key={item.id}
+                     ref={(node) => {
+                       navItemRefs.current[item.id] = node;
+                     }}
+                   >
+                     <button
+                       onClick={() => scrollToSection(item.id)}
+                       className="group flex items-baseline gap-3 py-2.5 w-full text-left"
+                     >
+                       <span
+                         className={`font-mono text-[11px] tnum transition-colors ${
+                           isActive ? "text-rust" : "text-rustdim group-hover:text-rust"
+                         }`}
+                       >
+                         0{i + 1}
+                       </span>
+                       <span
+                         className={`font-body text-[15px] transition-colors ${
+                           isActive
+                             ? "text-paper"
+                             : "text-faint group-hover:text-paper"
+                         }`}
+                       >
+                         {item.label}
+                       </span>
+                     </button>
+                   </li>
+                 );
+               })}
+             </ul>
+           </nav>
+         </div>
+       </div>
+
+       <div className="shrink-0 border-t border-line bg-ink/95 pt-3 pb-1 backdrop-blur-sm sticky bottom-0 z-10">
+         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+           {SOCIALS.map((social) => {
+             const Icon = SOCIAL_ICONS[social.icon];
+             return (
+               <a
+                 key={social.id}
+                 href={social.href}
+                 target={social.icon === "mail" ? undefined : "_blank"}
+                 rel="noreferrer"
+                 aria-label={social.label}
+                 className="flex h-10 w-10 items-center justify-center rounded-full text-faint transition-colors hover:bg-rust/10 hover:text-rust"
+               >
+                 <Icon className="h-[22px] w-[22px]" />
+               </a>
+             );
+           })}
+         </div>
+       </div>
       </aside>
     </>
   );

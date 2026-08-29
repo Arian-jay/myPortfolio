@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "postprocessing": "^6.39.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "resend": "^6.19.0"
+    "resend": "^6.19.0",
+    "three": "^0.185.1"
   },
   "scripts": {
     "start": "react-scripts start",
