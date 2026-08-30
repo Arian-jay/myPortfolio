@@ -9,7 +9,6 @@ import Projects from "./components/sections/Projects.jsx";
 import Certifications from "./components/sections/Certifications.jsx";
 import Contact from "./components/sections/Contact.jsx";
 import PixelBlast from "./components/PixelBlast.jsx";
-import * as THREE from 'three';
 
 export default function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
