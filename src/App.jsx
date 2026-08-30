@@ -8,7 +8,7 @@ import Expertise from "./components/sections/Expertise.jsx";
 import Projects from "./components/sections/Projects.jsx";
 import Certifications from "./components/sections/Certifications.jsx";
 import Contact from "./components/sections/Contact.jsx";
-import PixelBlast from "./components/PixelBlast.jsx";
+import Particles from './components/Particles.jsx';
 
 export default function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -40,27 +40,20 @@ export default function App() {
     <div className="relative min-h-screen overflow-x-hidden bg-ink">
 
       {/* ========================================
-          PIXEL BLAST BACKGROUND
+          FIXED PARTICLES BACKGROUND
           ======================================== */}
-      <div className="absolute inset-0 z-0 ">
-        <PixelBlast
-          variant="diamond"
-          pixelSize={3}
-          color="#F97316"
-          patternScale={2}
-          patternDensity={0.45}
-          pixelSizeJitter={1.05}
-          enableRipples
-          rippleSpeed={0.3}
-          rippleThickness={0.1}
-          rippleIntensityScale={1}
-          liquid={false}
-          liquidStrength={0.12}
-          liquidRadius={1.2}
-          liquidWobbleSpeed={5}
-          speed={3}
-          edgeFade={0.25}
-          transparent
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <Particles
+          particleColors={["#ffffff"]}
+          particleCount={100}
+          particleSpread={10}
+          speed={0.2}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation
+          pixelRatio={1}
+          className="h-full w-full"
         />
       </div>
 
@@ -110,7 +103,6 @@ export default function App() {
           <path d="m5 12 7-7 7 7" />
         </svg>
       </button>
-
     </div>
   );
 }

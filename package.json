@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "ogl": "^1.0.11",
     "postprocessing": "^6.39.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
