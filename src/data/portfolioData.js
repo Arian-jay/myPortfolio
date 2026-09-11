@@ -4,6 +4,7 @@ import charmafaWeb from "./images/projects/charmafaWeb.png";
 import charmafaMobile from "./images/projects/charmafaMobile.png";
 import portfolioImg from "./images/projects/portfolio.png";
 import ojtTrackerImg from "./images/projects/ojtTracker.png";
+import planSpotImg from "./images/projects/planSpot.png";
 
 export const NAV_ITEMS = [
   { id: "home", label: "Home" },
@@ -60,6 +61,21 @@ export const SKILLS = [
   { name: "MySQL, Supabase, PostgreSQL", note: "Database management system"},
 ];
 
+export const TECH_LOGOS = [
+  { iconName: "SiJavascript", title: "JavaScript", href: "https://developer.mozilla.org/docs/Web/JavaScript" },
+  { iconName: "SiReact", title: "React", href: "https://react.dev" },
+  { iconName: "SiHtml5", title: "HTML5", href: "https://developer.mozilla.org/docs/Web/HTML" },
+  { iconName: "SiCss", title: "CSS", href: "https://developer.mozilla.org/docs/Web/CSS" },
+  { iconName: "SiTailwindcss", title: "Tailwind CSS", href: "https://tailwindcss.com" },
+  { iconName: "SiNodedotjs", title: "Node.js", href: "https://nodejs.org" },
+  { iconName: "SiGit", title: "Git", href: "https://git-scm.com" },
+  { iconName: "SiGithub", title: "GitHub", href: "https://github.com" },
+  { iconName: "SiLaravel", title: "Laravel", href: "https://laravel.com" },
+  { iconName: "SiMysql", title: "MySQL", href: "https://www.mysql.com" },
+  { iconName: "SiSupabase", title: "Supabase", href: "https://supabase.com" },
+  { iconName: "SiPostgresql", title: "PostgreSQL", href: "https://www.postgresql.org" },
+];
+
 export const EDUCATION = [
   {
     title: "Caraga State University",
@@ -104,6 +120,22 @@ export const CERTIFICATIONS = [
 
 export const PROJECTS = [
   {
+    title: "PlanSpot",
+    year: "2026",
+    desc: "PlanSpot addresses fragmented scheduling by providing an all-in-one platform to create, organize, and coordinate events. With dynamic scheduling, real-time connectivity, and calendar syncing, it simplifies collaboration, reduces conflicts, and saves time.",
+    stack: ["Next", "Supabase", "Resend", "Tailwind CSS"],
+    href: "https://eventsched.vercel.app",
+    image: planSpotImg,
+  },
+  {
+    title: "Portfolio",
+    year: "2026",
+    desc: "A personal portfolio showcasing my projects, technical skills, experience, and background as an IT graduate and developer.",
+    stack: ["React", "Tailwind CSS", "Emailjs", "React Bits"],
+    href: "https://ajep-portfolio.vercel.app",
+    image: portfolioImg,
+  },
+  {
     title: "CHARMAFA Web App",
     year: "2025-2026",
     desc: "A web-based water billing and collection system for managing members, meter readings, billing records, payments, and administrative operations.",
@@ -119,14 +151,7 @@ export const PROJECTS = [
     href: "#",
     image: charmafaMobile,
   },
-  {
-    title: "Portfolio",
-    year: "2026",
-    desc: "A personal portfolio showcasing my projects, technical skills, experience, and background as an IT graduate and developer.",
-    stack: ["React", "Tailwind CSS", "Emailjs", "React Bits"],
-    href: "https://ajep-portfolio.vercel.app",
-    image: portfolioImg,
-  },
+  
   {
     title: "OJT Time Tracker",
     year: "2026",
