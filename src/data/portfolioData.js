@@ -136,6 +136,14 @@ export const PROJECTS = [
     image: portfolioImg,
   },
   {
+    title: "OJT Time Tracker",
+    year: "2026",
+    desc: "A web-based time tracking system for recording OJT hours, monitoring attendance, and tracking progress toward required internship hours.",
+    stack: ["Next.js", "Tailwind CSS", "Supabase", "Shadcn/UI"],
+    href: "https://ojtime.vercel.app",
+    image: ojtTrackerImg,
+  },
+  {
     title: "CHARMAFA Web App",
     year: "2025-2026",
     desc: "A web-based water billing and collection system for managing members, meter readings, billing records, payments, and administrative operations.",
@@ -150,14 +158,5 @@ export const PROJECTS = [
     stack: ["Flutter", "Dart", "SQLite"],
     href: "#",
     image: charmafaMobile,
-  },
-  
-  {
-    title: "OJT Time Tracker",
-    year: "2026",
-    desc: "A web-based time tracking system for recording OJT hours, monitoring attendance, and tracking progress toward required internship hours.",
-    stack: ["Next.js", "Tailwind CSS", "Supabase", "Shadcn/UI"],
-    href: "https://ojtime.vercel.app",
-    image: ojtTrackerImg,
   },
 ];

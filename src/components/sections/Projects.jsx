@@ -85,6 +85,10 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? PROJECTS : PROJECTS.slice(0, 4);
+
   return (
     <section
       id="projects"
@@ -92,9 +96,11 @@ export default function Projects() {
     >
       <div className="flex items-center gap-4 mb-10">
         <span className="font-mono text-xs text-rust tnum">05</span>
+
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-faint">
           Projects
         </span>
+
         <span className="flex-1 h-px bg-line" />
       </div>
 
@@ -103,10 +109,22 @@ export default function Projects() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {PROJECTS.map((project) => (
+        {visibleProjects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
+
+      {PROJECTS.length > 4 && (
+        <div className="flex justify-center mt-10">
+          <button
+            type="button"
+            onClick={() => setShowAll((prev) => !prev)}
+            className="font-mono text-xs uppercase tracking-[0.15em] text-rust border border-line px-5 py-3 transition-colors hover:border-rust hover:text-paper"
+          >
+            {showAll ? "Show less" : "Show more"}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
