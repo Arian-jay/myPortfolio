@@ -49,13 +49,13 @@ export default function Home() {
           >
             Download Resume
           </a>
-          <a
+          {/* <a
             href="/cv.pdf"
             download="cv.pdf"
             className="w-full sm:w-auto px-6 py-3 border border-line text-paper font-mono text-xs uppercase tracking-[0.15em] hover:border-rust hover:text-rust transition-colors text-center"
           >
             Download CV
-          </a>
+          </a> */}
         </div>
       </div>
 
