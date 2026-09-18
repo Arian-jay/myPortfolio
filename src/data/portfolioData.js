@@ -59,6 +59,7 @@ export const SKILLS = [
   { name: "Git & GitHub", note: "version control" },
   { name: "laravel", note: "MVC framework for PHP"},
   { name: "MySQL, Supabase, PostgreSQL", note: "Database management system"},
+  { name: "C#, .Net", note: "Object-oriented programming and web development framework"},
 ];
 
 export const TECH_LOGOS = [
@@ -74,6 +75,8 @@ export const TECH_LOGOS = [
   { iconName: "SiMysql", title: "MySQL", href: "https://www.mysql.com" },
   { iconName: "SiSupabase", title: "Supabase", href: "https://supabase.com" },
   { iconName: "SiPostgresql", title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { iconName: "SiCsharp", title: "C#", href: "https://docs.microsoft.com/en-us/dotnet/csharp/" },
+  { iconName: "SiDotnet", title: ".NET", href: "https://dotnet.microsoft.com/" },
 ];
 
 export const EDUCATION = [
