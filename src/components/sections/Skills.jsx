@@ -15,6 +15,8 @@ import {
   SiMysql,
   SiSupabase,
   SiPostgresql,
+  SiSharp,
+  SiDotnet,
 } from "react-icons/si";
 
 const ICONS = {
@@ -30,6 +32,8 @@ const ICONS = {
   SiMysql,
   SiSupabase,
   SiPostgresql,
+  SiSharp,
+  SiDotnet,
 };
 console.log("ICONS:", ICONS);
 
