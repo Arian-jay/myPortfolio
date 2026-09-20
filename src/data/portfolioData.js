@@ -119,6 +119,7 @@ export const CERTIFICATIONS = [
   "Oral Presenter, 9th International Artificial Intelligence and Data Processing Symposium (IDAP'25).",
   "SCII-Com'26 Participant Certificate.",
   "Best Poster Award, SCII-Com'26 – Awarded for outstanding research poster presentation.",
+  "Cisco Networking Academy IT Customer Support Basics Certificate.",
 ];
 
 export const PROJECTS = [
