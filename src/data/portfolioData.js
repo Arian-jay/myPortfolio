@@ -36,6 +36,12 @@ export const SOCIALS = [
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=ajeprisco@gmail.com",
     icon: "mail",
   },
+  {
+    id: "github",
+    label: "GitHub",
+    href: "https://github.com/Arian-jay",
+    icon: "github",
+  },
 ];
 
 export const PROFILE = {
