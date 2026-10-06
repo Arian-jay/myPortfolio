@@ -60,7 +60,7 @@ export default function Home() {
       </div>
 
       <div className="absolute bottom-10 left-6 sm:left-10 lg:left-16 font-mono text-[11px] text-faint hidden sm:block">
-        scroll — 01 / 06
+        scroll — 01 / 08
       </div>
     </section>
   );

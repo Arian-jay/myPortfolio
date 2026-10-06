@@ -135,7 +135,7 @@ export const PROJECTS = [
     title: "Portfolio",
     year: "2026",
     desc: "A personal portfolio showcasing my projects, technical skills, experience, and background as an IT graduate and developer.",
-    stack: ["React", "Tailwind CSS", "Emailjs", "React Bits"],
+    stack: ["React", "Tailwind CSS", "Make (AI Automation)", "React Bits"],
     href: "https://ajep-portfolio.vercel.app",
     image: portfolioImg,
   },

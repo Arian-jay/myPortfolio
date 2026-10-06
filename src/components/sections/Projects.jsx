@@ -95,7 +95,7 @@ export default function Projects() {
       className="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-24 border-t border-line"
     >
       <div className="flex items-center gap-4 mb-10">
-        <span className="font-mono text-xs text-rust tnum">05</span>
+        <span className="font-mono text-xs text-rust tnum">06</span>
 
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-faint">
           Projects
