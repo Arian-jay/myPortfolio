@@ -5,6 +5,8 @@ import charmafaMobile from "./images/projects/charmafaMobile.png";
 import portfolioImg from "./images/projects/portfolio.png";
 import ojtTrackerImg from "./images/projects/ojtTracker.png";
 import planSpotImg from "./images/projects/planSpot.png";
+import imgSorterAutomation from "./images/projects/imgSorterAutomation.png";
+import portfolioContactAutomation from "./images/projects/potfolioContactAutomation.png";
 
 export const NAV_ITEMS = [
   { id: "home", label: "Home" },
@@ -144,6 +146,22 @@ export const PROJECTS = [
     stack: ["React", "Tailwind CSS", "Make (AI Automation)", "React Bits"],
     href: "https://ajep-portfolio.vercel.app",
     image: portfolioImg,
+  },
+  {
+    title: "Image Sorter Automation",
+    year: "2026",
+    desc: "A personal automation project that solves the problem of manually organizing images by automating the sorting process based on the year they were uploaded. It helps keep image files organized, reduces manual work, and makes it easier to locate and manage images from different years.",
+    stack: ["Make (AI Automation)", "Google Drive", "Gmail"],
+    href: "",
+    image: imgSorterAutomation,
+  },
+  {
+    title: "Portfolio Contact Automation",
+    year: "2026",
+    desc: "A personal automation project that streamlines the process of handling contact form submissions from my portfolio website. It automatically sends the submitted messages to my Gmail, reducing the need to manually check for new inquiries and helping ensure that messages from potential clients or visitors are received more efficiently.",
+    stack: ["Make (AI Automation)", "Gmail"],
+    href: "",
+    image: portfolioContactAutomation,
   },
   {
     title: "OJT Time Tracker",
